@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #141e30, #4b2c83);
+}
+
+.music-player {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    color: white;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.album-art {
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    font-size: 75px;
+    box-shadow: 0 8px 25px rgba(255, 117, 140, 0.3);
+}
+
+h2 {
+    margin-bottom: 8px;
+    font-size: 22px;
+}
+
+#artist {
+    color: #d8c9f5;
+    margin-bottom: 25px;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+#progress {
+    flex: 1;
+    min-width: 0;
+    cursor: pointer;
+    accent-color: #ff7eb3;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.controls button {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.controls button:hover {
+    transform: scale(1.2);
+}
+
+#playBtn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ff7eb3;
+    font-size: 25px;
+}
+
+.volume-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+#volume {
+    width: 110px;
+    cursor: pointer;
+    accent-color: #ff7eb3;
+}
+
+h3 {
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+#playlist {
+    list-style: none;
+    text-align: left;
+}
+
+#playlist li {
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#playlist li:hover,
+#playlist li.active {
+    background: rgba(255, 126, 179, 0.35);
+}
+
+@media (max-width: 420px) {
+    .music-player {
+        padding: 22px 16px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
